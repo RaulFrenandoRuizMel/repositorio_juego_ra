@@ -11,8 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.juego_ra.ui.pantallas.Principal
 import com.example.juego_ra.ui.theme.Juego_raTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Juego_raTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    Principal(Modifier.padding(innerPadding))
 
                 }
             }
